@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projeto de teste elegante e moderno com design premium, glassmorphism e OKLCH gradients.">
+  <title>Noble Curie - Teste de Design Moderno</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Efeitos de Brilho de Fundo -->
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+    <!-- Barra de Navegação/Ações superiores -->
+    <header class="toolbar" id="app-header">
+      <span class="logo-text">noble.curie</span>
+      
+      <!-- Controles de Tema -->
+      <nav class="theme-controls" aria-label="Controle de Tema Visual">
+        <button class="theme-btn" data-theme="light" title="Modo Claro" aria-label="Modo Claro">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+        </button>
+        <button class="theme-btn" data-theme="dark" title="Modo Escuro" aria-label="Modo Escuro">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+        <button class="theme-btn active" data-theme="auto" title="Sistema" aria-label="Seguir Sistema Operacional">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Cartão de Perfil Principal -->
+    <main>
+      <article class="profile-card" id="main-profile">
+        <!-- Header do Perfil -->
+        <header class="profile-header">
+          <div class="avatar-container">
+            <div class="avatar-glow"></div>
+            <div class="avatar-inner">
+              <svg class="avatar-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Representação visual do avatar">
+                <defs>
+                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--neon-pink)" />
+                    <stop offset="100%" stop-color="var(--neon-indigo)" />
+                  </linearGradient>
+                </defs>
+                <path d="M 20 85 C 20 65, 32 55, 50 55 C 68 55, 80 65, 80 85 Z" fill="url(#avatarGrad)" />
+                <circle cx="50" cy="35" r="18" fill="url(#avatarGrad)" />
+                <circle cx="70" cy="20" r="4" fill="var(--neon-pink)" />
+                <path d="M 68 20 Q 50 10 32 20" fill="none" stroke="var(--neon-indigo)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="status-badge" title="Disponível para novos projetos"></div>
+          </div>
+          
+          <div class="profile-details">
+            <h1 class="profile-name">Eliezer Vargas</h1>
+            <p class="profile-title">Engenheiro de UI & UI/UX Developer</p>
+          </div>
+        </header>
+
+        <!-- Grade de Métricas -->
+        <section class="stats-grid" aria-label="Estatísticas Rápidas">
+          <div class="stat-item">
+            <span class="stat-val" id="stat-projects">48</span>
+            <span class="stat-label">Projetos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-contribs">1.4k</span>
+            <span class="stat-label">Commits</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-score">99%</span>
+            <span class="stat-label">Precisão</span>
+          </div>
+        </section>
+
+        <!-- Widget de Gráfico Circular (CSS-Only) com Tabela Acessível Fallback -->
+        <section class="chart-widget" aria-label="Métricas de Desempenho Visual">
+          <div class="chart-visual" aria-hidden="true">
+            <span class="chart-percent">78%</span>
+          </div>
+          
+          <div class="chart-info">
+            <h2 class="chart-title">Qualidade de Código</h2>
+            <p class="chart-desc">Baseado em avaliações estáticas automatizadas e consistência.</p>
+          </div>
+
+          <!-- Tabela semântica de fallback para leitores de tela -->
+          <table class="sr-only">
+            <caption>Métricas de qualidade de código detalhadas</caption>
+            <thead>
+              <tr>
+                <th scope="col">Métrica</th>
+                <th scope="col">Porcentagem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Qualidade de Código</td>
+                <td>78%</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Seção de Tecnologias / Skills -->
+        <section class="skills-section" aria-labelledby="skills-heading">
+          <h2 class="skills-title" id="skills-heading">Tecnologias Destacadas</h2>
+          <div class="tags-flex">
+            <button class="tag" type="button">CSS OKLCH</button>
+            <button class="tag" type="button">Glassmorphism</button>
+            <button class="tag" type="button">Vanilla JS</button>
+            <button class="tag" type="button">Semantic HTML</button>
+            <button class="tag" type="button">Web Access</button>
+            <button class="tag" type="button">Responsive Layout</button>
+          </div>
+        </section>
+
+        <!-- Ações de Engajamento -->
+        <section class="actions-container" aria-label="Ações de Contato">
+          <button class="btn btn-primary" type="button" id="btn-action-primary">
+            <span>Conectar</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <button class="btn btn-secondary" type="button" id="btn-action-secondary">
+            <span>Ver Portfólio</span>
+          </button>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="index.js" defer></script>
+</body>
+</html>
